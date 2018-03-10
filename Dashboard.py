@@ -11,7 +11,7 @@ train_X,train_y,test_X,test_y=fetch_data(dataset,700)
 model = load_model('NBM.h5')
 
 xy = model.predict(train_X)
-yhat = model.predict(test_X,batch_size= 20)
+yhat = model.predict(test_X,batch_size= 36)
 
 yhat,inv_y,xy,invt_y,xTrain,xTest=estimate(test_X,train_X,yhat,xy,test_y,train_y)
      
