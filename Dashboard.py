@@ -15,7 +15,8 @@ yhat = model.predict(test_X,batch_size= 20)
 
 yhat,inv_y,xy,invt_y,xTrain,xTest=estimate(test_X,train_X,yhat,xy,test_y,train_y)
      
-fig1 = figure(title="Testing")
+fig1 = figure(title="Testing"
+             tools="pan,box_zoom,wheel_zoom,reset")
 fig1.border_fill_color = "whitesmoke"
 fig1.min_border_right = 30
 
@@ -28,7 +29,8 @@ fig1.yaxis.major_label_orientation = "vertical"
 
 
 
-fig2 = figure(title='Training')
+fig2 = figure(title='Training'
+             tools="pan,box_zoom,wheel_zoom,reset")
 fig2.border_fill_color = "whitesmoke"
 fig2.line(xTest,xy,color="red",legend='Predicted') 
 fig2.line(xTest,invt_y,legend="SCADA Data")
