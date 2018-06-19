@@ -97,7 +97,7 @@ def plot(y_train,yhat_train,y_test,yhat_test):
     return;
     
 def main():
-    dataset = read_csv('C:\\Users\\Admin\\Documents\\SCADA\\am69_seasonal.txt', 
+    dataset = read_csv('am69_seasonal.txt', 
                        header=0, index_col=None, sep="\t")
                       
 
