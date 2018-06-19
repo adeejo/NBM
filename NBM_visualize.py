@@ -74,20 +74,20 @@ def plot(yTrain,Pred,diff,data,title):
 def main():
 
     #AM14 and AM69 files have been preprocessed in R
-    dataset_am14 = pd.read_csv('C:\\Users\\Admin\\Documents\\SCADA\\am14_seasonal.txt',
+    dataset_am14 = pd.read_csv('am14_seasonal.txt',
                             header=0, index_col=None, sep="\t")
-    dataset_am69 = pd.read_csv('C:\\Users\\Admin\\Documents\\SCADA\\am69_seasonal.txt', 
+    dataset_am69 = pd.read_csv('am69_seasonal.txt', 
                             header=0, index_col=None, sep="\t")
     
     #reseason values taken from preprocessed values in R
-    reseason_am14 = pd.read_csv('C:\\Users\\Admin\\Documents\\SCADA\\reseason_am14_gbox.txt', 
+    reseason_am14 = pd.read_csv('reseason_am14_gbox.txt', 
                              header=0, index_col=None, sep="\t")
-    reseason_am69 = pd.read_csv('C:\\Users\\Admin\\Documents\\SCADA\\reseason_am69_gbox.txt',
+    reseason_am69 = pd.read_csv('reseason_am69_gbox.txt',
                              header=0, index_col=None, sep="\t")
     #date index taken from R.Index required for visuals in bokeh and matplotlib 
-    dat14 = pd.read_csv('C:\\Users\\Admin\\Documents\\SCADA\\date14.txt',
+    dat14 = pd.read_csv('date14.txt',
                      header=0, index_col=None, sep="\t")
-    dat69 = pd.read_csv('C:\\Users\\Admin\\Documents\\SCADA\\date69.txt', 
+    dat69 = pd.read_csv('date69.txt', 
                      header=0, index_col=None, sep="\t")
     
     #Changing shape of datetime
